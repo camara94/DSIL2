@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Exercice 3</title>
+	</head>
+	<body>
+		<form>
+			<h1>Atélier 3 : exercice 3</h1>
+			<label for="prenom">Entrez votre prénom : </label>
+			<input type="text" name="prenom" id="prenom">
+			<br>
+			<span id="span"></span>
+		</form>
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$('input').keypress(function (e) {
+					var va = String.fromCharCode(e.which);
+					$('#span').text(va);
+				})
+			})
+		</script>
+	</body>
+</html>

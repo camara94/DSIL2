@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <title> Atelier 03</title>
+  <style type="text/css">
+
+  /*<![CDATA[*/
+#galerie
+{  width: 400px ;
+   height: 600px;
+  background: #CC3300 ;
+  border: 1px solid  #660000 ;
+  padding: 15px ;
+  margin: 30px ;
+  text-align: center;
+}
+.galerie_mini
+{ padding: 3px;
+  border: 1px solid  #660000 ;
+  border-radius:10px;
+ /* box-shadow: #CC99FF;    */
+
+}
+
+
+.galerie_mini img
+{ display: inline;
+  margin: 2px  ;
+  border: 1px solid  ;
+}
+
+/*.photo
+{
+  //clear: both ;
+  margin: 0 auto ;
+  transition:all 10s;
+  -moz-transition:all 10s;
+  -webkit-transition:all 10s;
+
+  -o-transition:all 10s;}*/
+
+
+
+h1
+{
+  font: italic Georgia;
+  color: black ;
+}
+
+.photo img
+{
+   margin: 0 ;
+   border: 2px solid ;
+   width: 400px;
+   height: 400px;
+   border-radius:10px;
+    box-shadow: 4px 4px 4px #FF9900;
+
+}
+
+
+  /*]]>*/
+  </style>
+
+</head>
+
+<body>
+  <div id="galerie">
+  <div  class="galerie_mini" >
+
+      <img id="im1" src="images/m_photo1.png" title="photo 1" alt="Le titre de la photo 1"  />
+
+      <img id="im2"  src="images/m_photo2.png" title="photo 2" alt="Le titre de la photo 2"  />
+
+     <img  id="im3" src="images/m_photo3.png" title="photo 3" alt="Le titre de la photo 3"  />
+
+    <img  id="im4" src="images/m_photo4.png"  title="photo 4" alt="Le titre de la photo 4"  />
+
+     <img  id="im5" src="images/m_photo5.png"  title="photo 5" alt="Le titre de la photo 5"  />
+  </div>
+
+  <div  class="photo">
+    <h2  id="titr">Titre de la photo </h2>
+    <img id="big_pict" src="images/photo1.png" alt="Photo 1 en taille normale"  />
+  </div>
+</div>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $('img').click(function () {
+        var src = $(this).attr('src');
+        $('#big_pict').attr({'src':src});
+        $('#titr').text(src.substring(9,15));
+    })
+  })
+</script>
+</body>
+
+</html>

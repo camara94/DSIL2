@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Exercice 1</title>
+		<style type="text/css">
+			.active{   border: #009900 solid 2px;   } 
+		</style>
+	</head>
+	<body>
+		<div style="display: inline-block;width: 350px;text-align: center">
+			<img src="images/FLEUR.png" width="100" height="100"><br>
+			<button id="btn2">2x</button>
+			<button id="btn3">3x</button>
+			<button id="btn4">4x</button>
+			<button id="btn5">5x</button>
+			<button id="init">Initiale</button>
+		</div>
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				var image = $('img');
+				var hauteurImage = Number(image.innerHeight());
+				var largeurImage = Number(image.innerWidth());
+				//alert(typeof(largeurImage)+" " + hauteurImage)
+				$('#btn2').on('click',function () {
+					image.css({'height':2*hauteurImage,'width':2*largeurImage});
+				})
+
+				$('#btn3').on('click',function () {
+					image.css({'height':3*hauteurImage,'width':3*largeurImage});
+				})
+
+				$('#btn4').on('click',function () {
+					image.css({'height':4*hauteurImage,'width':4*largeurImage});
+				})
+
+				$('#btn5').on('click',function () {
+					image.css({'height':5*hauteurImage,'width':5*largeurImage});
+				})
+				$('#init').on('click',function () {
+					image.css({'height':hauteurImage,'width':largeurImage});
+				})
+				$('button').on('click',function () {
+					$(this).attr({'class':'active'});
+				})
+
+				if($('button').on('click',true))
+				{
+					$('button').off();
+				}
+			})
+		</script>
+	</body>
+</html>

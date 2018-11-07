@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Exercice</title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 150px;
+				/*background: url("images/confectionary.png");*/
+				background-image: url(images/confectionary.png);
+			}
+			#div2{
+				width: 200px;
+				height: 150px;
+				background: url(images/dark_embroidery.png);
+			}
+			#div3{
+				width: 200px;
+				height: 150px;
+				background: url(images/paisley.png);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<div id="div3"></div>
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$('#div1').mouseover(function () {
+					var url = $(this).css('background-image');
+					r = url.substring(54,url.length-2);
+					//alert(r);
+					document.body.background = r;
+				})
+				$('#div2').mouseover(function () {
+					var url = $(this).css('background-image');
+					r = url.substring(54,url.length-2);
+					document.body.background = r;
+				})
+
+				$('#div3').mouseover(function () {
+					var url = $(this).css('background-image');
+					r = url.substring(54,url.length-2);
+					document.body.background = r;
+				})
+			})
+		</script>
+	</body>
+</html>

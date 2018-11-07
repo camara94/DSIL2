@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title> Atelier 02 Correction</title>
+</head>
+
+<body>
+<h1> correction de l'atelier 02</h1>
+<form>
+<table border=1>
+<tr><td></td><td>Salle 1</td><td>Salle 2</td></tr>
+<tr><td>Lundi</td><td>X</td><td>X</td></tr>
+<tr><td>Mardi</td><td></td><td></td></tr>
+<tr><td>Mercredi</td><td>X</td><td></td></tr>
+<tr><td>Jeudi</td><td></td><td>X</td></tr>
+<tr><td>Vendredi</td><td>X</td><td>X</td></tr>
+</table>
+</form>
+
+    <!--On inclut la librairie jQuery-->
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function() {
+          // 1-	Colorez en rouge le contenu de la première et de la dernière cellule
+   $('td:first').css('background','red');
+   $('td:last').css('background','red');
+          // 2-	Ajouter le mot ‘moi’ aux cellules vides,
+    $('td:empty').text('moi');
+	
+	      //   3-	Colorer en alternance l’arrière-plan des lignes paires et impaires (paire :ccffff ; impaire :ccff99),
+	$('tr:even').css('background','#ccffff');
+    $('tr:odd').css('background','#ccff99');
+	
+	        //4-	Affichez dans une alerte le contenu des lignes de 2 à 5, (    .text()    )
+	// alert($('tr:gt(0):lt(5)').text()) ;
+			for(var i=1;i<5;i++)
+			alert($('tr:eq('+i+')').text()) ;
+			//	 5-	Affichez dans une alerte le contenu de la sixième ligne, 
+	alert($('tr:eq(5)').text()) ;
+	
+            // 6-	Remplacez la méthode utilisée dans ‘5’ par html(),déduisez la différence 
+	alert($('tr:eq(5)').html()) ;
+	});
+
+</script>
+</body>
+
+</html>
