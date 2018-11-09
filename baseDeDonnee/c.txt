@@ -1,0 +1,9 @@
+//création d'un utilisateur dans une base de donnée oracle
+create user dsi21g1 identified by dsi21g1;
+create user dsi21g2 identified by dsi21g2;
+
+//attributions des privilèges aux utilisateurs
+grant create session, create table, create view, resource to dsi21g1, dsi21g2;
+
+//connexion à la base de donnée oracle
+connect dsi21g1/dsi21g1;
