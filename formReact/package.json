@@ -1,0 +1,23 @@
+{
+  "name": "rxjs",
+  "version": "1.0.0",
+  "description": "Mon serveur pour m'exercer en rxjs",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/camara94/"
+  },
+  "keywords": [
+    "d4m4ro94"
+  ],
+  "author": "Camara Laby Damaro <ldamaro98@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
